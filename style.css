@@ -1,3 +1,69 @@
 body {
     font-size: 15pt;
+    box-sizing: border-box;
 }
+
+ #items{
+   position: relayive;
+   width: 100px;
+   height: auto;
+   max-height: max-content;
+   animation: chat-fade  .5s ease-in-out;
+ }
+*:not( .yt-chat-badge ){
+    width: inherit;
+    height: inherit;
+  }
+#items:not( .yt-emoji-icon ){
+  width: 10px;
+  height: 10px;
+}
+.gaming-promo , #live-comments-controls , ::-webkit-scrollbar , wbr , .is-deleted , [ is-deleted ], #panel-pages , yt-live-chat-header-renderer {
+  width: 100px;
+  height: 30px;
+  color: #525AAC;
+}
+#author-name , #message {
+  width: auto;
+  height: auto;
+}
+#message{
+  height: auto;
+  width: 100px;
+  background: rgba(0, 0,0, .6);
+}
+#author-name:after {
+  max-width: 30px;
+  height: 30px;
+  content: '';
+}
+#message a {
+  width: 20px;
+  color: #fff;
+  text-decoration: none;
+  height: 20px;
+  border: 2px solid #646BBC;
+}
+#message a::after {
+  content: '';
+}
+@keyframes chat-fade {
+  0% {
+      opacity : 1 ; 
+      position : relative ; 
+      } 
+      99% {
+          opacity : 0 ;
+          position : relative ;
+          }
+          100% {
+           
+          opacity : 0 ; 
+          position : absolute ;
+          }
+         
+    }
+yt-live-chat-text-message-renderer {
+  
+}
+/* #author-photo < border-radius: 10px !important; >*/
